@@ -35,30 +35,47 @@ const HomePage = memo(() => {
 
           
           <nav>
-            
-            <div className="flex justify-center gap-4">
-              <a href="https://www.linkedin.com/in/mahdihassannoorasif/" aria-label="Twitter">
-              <FaLinkedin className="text-white text-2xl" />
-              </a>
-              <a href="https://github.com/MahdiHassanGo" aria-label="YouTube">
-              <FaGithub  className="text-white text-2xl"/>
-              </a>
-              <a href="https://www.facebook.com/mahdihassan.noor/" aria-label="Facebook">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current text-white">
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                </svg>
-              </a>
-            </div>
-          </nav>
+  <div className="flex justify-center gap-4">
+    <a 
+      href="https://www.linkedin.com/in/mahdihassannoorasif/" 
+      aria-label="LinkedIn" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <FaLinkedin className="text-white text-2xl" />
+    </a>
+    <a 
+      href="https://github.com/MahdiHassanGo" 
+      aria-label="GitHub" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <FaGithub className="text-white text-2xl"/>
+    </a>
+    <a 
+      href="https://www.facebook.com/mahdihassan.noor/" 
+      aria-label="Facebook" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        className="fill-current text-white"
+      >
+        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
 
           <div className="flex justify-center mt-6">
-            <button className="btn bg-yellow-400">Download Resume</button>
-          </div>
+            <a  href='https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png' aria-label="Cv" 
+      target="_blank" 
+      rel="noopener noreferrer" className="btn bg-yellow-400">Download Resume</a>
+          </div >
         </div>
       </div>
     </div>

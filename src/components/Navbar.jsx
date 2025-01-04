@@ -43,7 +43,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-       <Link className="btn bg-yellow-400 text-black border-spacing-0" >Download My CV</Link>
+       <a  href='https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png' aria-label="Cv" 
+      target="_blank" 
+      rel="noopener noreferrer" className="btn bg-yellow-400 text-black border-spacing-0" >Download My CV</a>
       </div>
     </div>
   );
