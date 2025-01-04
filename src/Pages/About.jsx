@@ -5,7 +5,6 @@ const About = () => {
     <div id="about-me"  className="relative bg-primaryBg h-screen flex flex-col items-center justify-center text-center ">
     
 
-      {/* Background Image Section */}
       <div className="relative w-full max-w-5xl px-4">
         <img
           src="./assets/Myphoto.jpg"
@@ -13,7 +12,7 @@ const About = () => {
           className="w-full object-cover rounded-lg"
         />
 
-        {/* Text Overlay */}
+    
         <div
           className="absolute inset-0 flex flex-col items-center justify-center"
           style={{ marginTop: "200px" }}
@@ -29,16 +28,13 @@ const About = () => {
         </div>
       </div>
 
-      {/* Bottom Section */}
+     
       <div className="absolute bottom-4 md:bottom-10 flex justify-between w-full px-4 md:px-8 text-[#f5e7d4] text-xs md:text-sm">
         <span>Mahdi Hassan Noor Asif</span>
         <span className="font-league text-base md:text-xl">Web Developer</span>
       </div>
 
-      {/* Right Arrow */}
-      <div className="absolute top-1/2 right-4 md:right-10 transform -translate-y-1/2">
-        <span className="text-[#f5e7d4] text-lg md:text-2xl">→</span>
-      </div>
+      
     </div>
   );
 };

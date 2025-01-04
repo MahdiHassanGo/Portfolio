@@ -1,7 +1,10 @@
-import { createElement, useState } from "react";
+import { createElement, useEffect, useState } from "react";
 import Modal from "react-modal";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const skills = {
+
   skills_content: [
     {
       name: "React",
@@ -62,6 +65,15 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const Skills = () => {
+  useEffect(() => {
+   const timer = setTimeout(() => {
+      AOS.init();
+    }, 1500); 
+     return () => clearTimeout(timer);
+  }, []);
+
+
+  
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectSkill, setSelectSkill] = useState(null);
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -75,62 +87,49 @@ const Skills = () => {
   }
 
   return (
-    <div id="skills">
-      <div>
-        <h2 className="text-white text-5xl text-center font-league mt-10">My Skills</h2>
-      </div>
-      <section className="min-h-fit bg-primaryBg" id="skills">
-        
-
-        <div className="md:container px-5 py-14">
-          <h2 className="title" data-aos="fade-down">
-            {skills.title}
-          </h2>
-          <h4 className="subtitle" data-aos="fade-down">
-            {skills.subtitle}
-          </h4>
-          <br />
-          <div className="flex flex-wrap gap-4 justify-center mx-auto">
-            {skills.skills_content.map((skill, i) => (
-              <div
-                key={i}
-                data-aos="fade-up"
-                data-aos-delay={i * 400}
-                className={`bg-card sm:cursor-pointer 
-                  relative group w-full flex items-center
-                  gap-5 p-5 max-w-sm rounded-md border-0
-                  ${hoveredSkill === skill ? "border-white border-0" : "border-webdev border-2"}
-
-                  ${hoveredSkill && hoveredSkill !== skill ? "blur-sm" : ""}`}
-                onMouseEnter={() => setHoveredSkill(skill)}
-                onMouseLeave={() => setHoveredSkill(null)}
-                onClick={() => {
-                  setSelectSkill(skill);
-                  openModal();
-                  
-                  window.open(skill.link, "_blank");
-                }}
-              >
-                <div>
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} Logo`}
-                    className="w-10 group-hover:scale-125 duration-200"
-                  />
-                </div>
-                <div>
-                  <h6 className="font-bold text-3xl text-white hover:text-webdev">{skill.name}</h6>
-                  <p className="italic text-white hover: text-webdev">{skill.para}</p>
-                  <div className="text-xl absolute top-3 right-3 text-white">
-                    {skills.icon ? createElement(skills.icon) : <FaArrowRight />}
-                  </div>
+    <div id="skills" className="w-full flex flex-col items-center"  data-aos="fade-up">
+    <h2 className="text-white text-5xl text-center font-league mt-10">My Skills</h2>
+    
+    <section className="min-h-fit bg-primaryBg w-full" id="skills">
+      <div className="container mx-auto px-4 py-14 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {skills.skills_content.map((skill, i) => (
+            <div
+              key={i}
+             
+             
+              className={`bg-card sm:cursor-pointer relative group flex items-center
+                gap-5 p-5 w-full max-w-sm rounded-md 
+                ${hoveredSkill === skill ? "border-white border-2" : "border-webdev border-2"}
+               `}
+              onMouseEnter={() => setHoveredSkill(skill)}
+              onMouseLeave={() => setHoveredSkill(null)}
+              onClick={() => {
+                setSelectSkill(skill);
+                openModal();
+                window.open(skill.link, "_blank");
+              }}
+            >
+              <div>
+                <img
+                  src={skill.logo}
+                  alt={`${skill.name} Logo`}
+                  className="w-10 group-hover:scale-125 duration-200"
+                />
+              </div>
+              <div>
+                <h6 className="font-bold text-3xl text-white hover:text-webdev">{skill.name}</h6>
+                <p className="italic text-white hover:text-webdev">{skill.para}</p>
+                <div className="text-xl absolute top-3 right-3 text-white">
+                  {skills.icon ? createElement(skills.icon) : <FaArrowRight />}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
   );
 };
 

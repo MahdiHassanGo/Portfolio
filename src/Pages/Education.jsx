@@ -1,6 +1,14 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+  import 'aos/dist/aos.css'
 const Education = () => {
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+       AOS.init();
+     }, 1500); 
+      return () => clearTimeout(timer);
+   }, []);
   const educationData = [
     {
       period: "2022-Present",
@@ -20,8 +28,8 @@ const Education = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-primaryBg p-8 md:p-12">
-      <div className="flex flex-col md:flex-row justify-between items-start mb-12 md:mb-20">
+    <section className="w-full min-h-screen bg-primaryBg p-8 md:p-12" >
+      <div className="flex flex-col md:flex-row justify-between items-start mb-12 md:mb-20"  data-aos="fade-left">
         <h1 className="text-webdev text-[48px] md:text-[120px] leading-none font-bold md:ml-10">
           EDUCATION
         </h1>
@@ -47,7 +55,7 @@ const Education = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-20"  data-aos="fade-right">
         {educationData.map((item, index) => (
           <div key={index} className="text-webdev">
             <div className="mb-2 text-sm font-medium">

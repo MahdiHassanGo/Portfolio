@@ -17,10 +17,10 @@ const HomePage = memo(() => {
   }, []);
 
   return (
-    <div className="hero bg-primaryBg min-h-screen">
+    <div className="hero bg-primaryBg min-h-screen mb-10">
       <div className="hero-content flex-col mt-5">
         <img
-          src="./public/assets/Main.png"
+          src="./assets/Main.png"
           className="max-w-full rounded-lg shadow-2xl"
           alt="Main Hero"
         />
