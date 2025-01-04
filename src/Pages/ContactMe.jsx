@@ -55,7 +55,7 @@ const ContactMe = () => {
       </div>
 
     
-      <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
+      <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center" data-aos="fade-left">
         <img
           src="./assets/ContactMe.jpg"
           alt="Contact Illustration"

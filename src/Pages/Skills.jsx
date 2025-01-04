@@ -33,13 +33,13 @@ const skills = {
     {
       name: "MongoDB",
       logo: "https://www.cdnlogo.com/logos/m/30/mongodb-icon.svg",
-      para: "To store and manage data in a flexible, scalable, and document-oriented database, ideal for modern web applications.",
+      para: "To store and manage data in a document-oriented database.",
       link: "https://www.mongodb.com" // MongoDB website
     },
     {
       name: "Express Js",
-      logo: "https://images.credly.com/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/express.png",
-      para: "to build fast and scalable server-side applications, simplifying the process of handling routes, middleware, and APIs in Node.js.",
+      logo: "https://images.seeklogo.com/logo-png/33/1/express-js-logo-png_seeklogo-339850.png?v=1957300750510964840",
+      para: "to build fast and scalable server-side applications js.",
       link: "https://expressjs.com" // Express.js website
     },
   ],

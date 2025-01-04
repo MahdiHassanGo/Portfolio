@@ -72,9 +72,7 @@ const Education = () => {
       </div>
       
       <div className="mt-12 md:mt-20">
-        <h2 className="text-webdev text-xl">
-          Mahdi Hassan Noor Asif
-        </h2>
+      
       </div>
     </section>
   );

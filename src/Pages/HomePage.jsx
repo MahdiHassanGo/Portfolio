@@ -74,7 +74,7 @@ const HomePage = memo(() => {
           <div className="flex justify-center mt-6">
             <a  href='https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png' aria-label="Cv" 
       target="_blank" 
-      rel="noopener noreferrer" className="btn bg-yellow-400">Download Resume</a>
+      rel="noopener noreferrer" className="btn bg-yellow-400 text-black">Download Resume</a>
           </div >
         </div>
       </div>

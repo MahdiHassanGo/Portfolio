@@ -1,8 +1,16 @@
 import React from "react";
-
+import  { useEffect, useState } from "react";
+import AOS from 'aos';
+  import 'aos/dist/aos.css';
 const About = () => {
+    useEffect(() => {
+     const timer = setTimeout(() => {
+        AOS.init();
+      }, 1500); 
+       return () => clearTimeout(timer);
+    }, []);
   return (
-    <div id="about-me"  className="relative bg-primaryBg h-screen flex flex-col items-center justify-center text-center ">
+    <div id="about-me"  className="relative bg-primaryBg h-screen flex flex-col items-center justify-center text-center   " data-aos="fade-up">
     
 
       <div className="relative w-full max-w-5xl px-4">

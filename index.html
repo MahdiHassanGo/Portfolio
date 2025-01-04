@@ -1,12 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="white">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/Logo.png" />
     <style>
-      html {
-    scroll-behavior: smooth;
-  }
+    body, html {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.main-container {
+  width: 100%;
+  overflow-x: hidden; /* Apply overflow-x hidden only here */
+  position: relative;
+}
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
