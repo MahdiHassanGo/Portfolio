@@ -8,7 +8,12 @@ export default {
     extend: {  colors: {
       primaryBg: '#021526',
       webdev:"#ebdcc4"
-    },},
+    },
+    fontFamily: {
+      league: ['"League Gothic"', 'sans-serif'], // 
+    },
+  
+  },
   
   },
   plugins: [
