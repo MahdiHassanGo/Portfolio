@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {  colors: {
       primaryBg: '#021526',
-      webdev:"#ebdcc4"
+      webdev:"#ebdcc4",
+      card:"#03346E"
     },
     fontFamily: {
       league: ['"League Gothic"', 'sans-serif'], // 
