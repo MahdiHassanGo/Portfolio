@@ -22,7 +22,7 @@ const About = () => {
 
     
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center"
+          className="absolute inset-0 flex flex-col items-center justify-center"data-aos="fade-up"
           style={{ marginTop: "200px" }}
         >
           <h1 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] font-league text-[#f5e7d4]">
@@ -38,8 +38,8 @@ const About = () => {
 
      
       <div className="absolute bottom-4 md:bottom-10 flex justify-between w-full px-4 md:px-8 text-[#f5e7d4] text-xs md:text-sm">
-        <span>Mahdi Hassan Noor Asif</span>
-        <span className="font-league text-base md:text-xl">Web Developer</span>
+        <span data-aos="fade-rgiht">Mahdi Hassan Noor Asif</span>
+        <span className="font-league text-base md:text-xl " data-aos="fade-left">Web Developer</span>
       </div>
 
       

@@ -23,6 +23,7 @@ const HomePage = memo(() => {
           src="./assets/Main.png"
           className="max-w-full rounded-lg shadow-2xl"
           alt="Main Hero"
+          onContextMenu={(e) => e.preventDefault()}
         />
         <div>
           <h1 className="text-5xl font-bold text-white text-center  justify-center">

@@ -87,12 +87,12 @@ const Skills = () => {
   }
 
   return (
-    <div id="skills" className="w-full flex flex-col items-center"  data-aos="fade-up">
-    <h2 className="text-white text-5xl text-center font-league mt-10">My Skills</h2>
+    <div id="skills" className="w-full flex flex-col items-center" >
+    <h2 className="text-white text-5xl text-center font-league mt-10"data-aos="fade-down">My Skills</h2>
     
     <section className="min-h-fit bg-primaryBg w-full" id="skills">
       <div className="container mx-auto px-4 py-14 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"  data-aos="fade-up">
           {skills.skills_content.map((skill, i) => (
             <div
               key={i}
@@ -100,7 +100,7 @@ const Skills = () => {
              
               className={`bg-card sm:cursor-pointer relative group flex items-center
                 gap-5 p-5 w-full max-w-sm rounded-md 
-                ${hoveredSkill === skill ? "border-white border-2" : "border-webdev border-2"}
+                ${hoveredSkill === skill ? "border-white border-0" : "border-webdev border-0"}
                `}
               onMouseEnter={() => setHoveredSkill(skill)}
               onMouseLeave={() => setHoveredSkill(null)}

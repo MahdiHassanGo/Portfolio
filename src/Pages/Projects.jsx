@@ -37,8 +37,8 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
-    <div id="projects" className="w-full flex flex-col items-center"  data-aos="fade-up">
-    <div className="flex justify-center my-8 mb-10 w-full max-w-xs">
+    <div id="projects" className="w-full flex flex-col items-center"  >
+    <div className="flex justify-center my-8 mb-10 w-full max-w-xs"data-aos="fade-down">
       <div className="mockup-code w-full bg-primaryBg">
         <pre data-prefix="$">
           <code>npm i Projects</code>
@@ -52,7 +52,7 @@ const Projects = () => {
       </div>
     </div>
 
-    <section className="min-h-fit bg-primaryBg py-14 w-full">
+    <section className="min-h-fit bg-primaryBg py-14 w-full" data-aos="fade-up">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {projects.map((project, i) => (
