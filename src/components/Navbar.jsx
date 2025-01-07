@@ -1,6 +1,8 @@
 import React from "react";
 import { FaCode } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { RiDownloadCloud2Line } from "react-icons/ri";
+
 
 const Navbar = () => {
   return (
@@ -29,24 +31,44 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a href="#about-me" className="text-black">
-                About Me
-              </a>
+              <NavLink
+                to="/about-me"
+                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+              >
+                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-black">
+                  About Me
+                </span>
+              </NavLink>
             </li>
             <li>
-              <a href="#skills" className="text-black">
-                Skills
-              </a>
+              <NavLink
+                to="/skills"
+                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+              >
+                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-black">
+                  Skills
+                </span>
+              </NavLink>
             </li>
             <li>
-              <a href="#projects" className="text-black">
-                Projects
-              </a>
+              <NavLink
+                to="/projects"
+                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+              >
+                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-black">
+                  Projects
+                </span>
+              </NavLink>
             </li>
             <li>
-              <a href="#contact-me" className="text-black">
-                Contact Me
-              </a>
+              <NavLink
+                to="/contact-me"
+                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+              >
+                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-black">
+                  Contact Me
+                </span>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -62,38 +84,58 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="#about-me" className="text-white hover:bg-slate-400">
-              About Me
-            </a>
+            <NavLink
+              to="/about-me"
+              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+            >
+              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
+                About Me
+              </span>
+            </NavLink>
           </li>
           <li>
-            <a href="#projects" className="text-white hover:bg-slate-400">
-              Projects
-            </a>
+            <NavLink
+              to="/projects"
+              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+            >
+              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
+                Projects
+              </span>
+            </NavLink>
           </li>
           <li>
-            <a href="#skills" className="text-white hover:bg-slate-400">
-              Skills
-            </a>
+            <NavLink
+              to="/skills"
+              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+            >
+              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
+                Skills
+              </span>
+            </NavLink>
           </li>
           <li>
-            <a href="#contact-me" className="text-white hover:bg-slate-400">
-              Contact Me
-            </a>
+            <NavLink
+              to="/contact-me"
+              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
+            >
+              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
+                Contact Me
+              </span>
+            </NavLink>
           </li>
         </ul>
       </div>
 
-      {/* Navbar End (Download CV Button) */}
+      {/* Navbar End (Download Resume Button) */}
       <div className="navbar-end">
         <a
-          href="https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png"
-          aria-label="Cv"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn bg-yellow-400 text-black text-sm px-3 py-1 rounded-md"
+          href='https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png'
+          download={true}
+          className="btn bg-transparent px-[2px] duration-300 hover:text-pColor py-[2px] explore-btn rounded-full h-max min-h-max border-none hover:border-none"
         >
-          Download My CV
+          <span className="bg-primary flex items-center gap-1 border-t border-[#8636ff]/50 px-6 py-3 rounded-full relative text-white">
+            Download Resume <RiDownloadCloud2Line />
+          </span>
         </a>
       </div>
     </div>

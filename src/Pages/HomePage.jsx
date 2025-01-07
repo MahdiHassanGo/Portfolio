@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, memo } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 const HomePage = memo(() => {
   const typewriterRef = useRef(null);
-
+  const words = `Hi,My Name is Mahdi Hassan Noor Asif
+  `;
   useEffect(() => {
     if (typewriterRef.current) {
       new Typewriter(typewriterRef.current, {
@@ -26,12 +28,10 @@ const HomePage = memo(() => {
           onContextMenu={(e) => e.preventDefault()}
         />
         <div>
-          <h1 className="text-5xl font-bold text-white text-center  justify-center">
-            Hi! My name is<span className="text-webdev ml-2"> Mahdi Hassan Noor</span>
-          </h1>
+        <TextGenerateEffect duration={7} filter={false} words={words} />
           <p className="py-6 text-white text-center text-2xl">
             I am a
-            <span className="text-webdev" id="typewriter" ref={typewriterRef}></span>
+            <span className="text-webdev font-league" id="typewriter" ref={typewriterRef}></span>
           </p>
 
           

@@ -1,24 +1,41 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {  colors: {
-      primaryBg: '#021526',
-      webdev:"#ebdcc4",
-      card:"#03346E"
-    },
-    fontFamily: {
-      league: ['"League Gothic"', 'sans-serif'], // 
-    },
+const {
+	default: flattenColorPalette,
+  } = require("tailwindcss/lib/util/flattenColorPalette");
   
-  },
+  /** @type {import('tailwindcss').Config} */
+  module.exports = {
+	content: [
+	  "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+	  "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+	  "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   
-  },
-  plugins: [
-    require('daisyui'),
-  ],
-}
-
+	  // Or if using `src` directory:
+	  "./src/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	darkMode: "class",
+	theme: {
+	  extend: {
+		colors:{
+			primaryBg: '#021526',
+  			webdev: '#ebdcc4',
+		},
+		fontFamily: {
+			league: ['League Gothic', 'sans-serif'],
+		  },
+	  },
+	},
+	plugins: [addVariablesForColors,
+		require('daisyui'),
+	],
+  };
+  
+  function addVariablesForColors({ addBase, theme }) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+	  Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+   
+	addBase({
+	  ":root": newVars,
+	});
+  }
