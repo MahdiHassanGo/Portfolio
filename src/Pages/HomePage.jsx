@@ -19,17 +19,23 @@ const HomePage = memo(() => {
   }, []);
 
   return (
-    <div className="hero bg-primaryBg min-h-screen mb-10">
-      <div className="hero-content flex-col mt-5">
-        <img
+    <div id="home" className=" hero bg-primaryBg min-h-screen mb-10">
+      <div className="hero-content flex-col">
+     <div className="mt-10 z-10">
+     <TextGenerateEffect duration={4} filter={false} words={words} />
+     </div>
+     <div className="-mt-12 ">
+     <img
           src="./assets/Main.png"
-          className="max-w-full rounded-lg shadow-2xl"
+          className="max-w-full rounded-lg "
           alt="Main Hero"
           onContextMenu={(e) => e.preventDefault()}
         />
+     </div>
+        
         <div>
-        <TextGenerateEffect duration={7} filter={false} words={words} />
-          <p className="py-6 text-white text-center text-2xl">
+      
+          <p className="py-6 text-white text-center text-4xl">
             I am a
             <span className="text-webdev font-league" id="typewriter" ref={typewriterRef}></span>
           </p>

@@ -16,6 +16,7 @@ const {
 	theme: {
 	  extend: {
 		colors:{
+			
 			primaryBg: '#021526',
   			webdev: '#ebdcc4',
 		},
