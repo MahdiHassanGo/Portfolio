@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FocusCards } from "@/components/ui/focus-cards";
 
-// Projects data with required format for FocusCards
 const projects = [
   {
     title: "CareHive",
