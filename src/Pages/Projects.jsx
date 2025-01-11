@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: "WhereIsIt",
-    src: "https://i.ibb.co.com/99xBbD0/Project-1.png",
+    src: "https://i.ibb.co.com/CKybk8w/image.png",
     link: "https://whereisit-88cd2.web.app",
   },
 ];
@@ -30,7 +30,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects" className="w-full flex flex-col items-center">
+    <div id="projects" className="w-full flex flex-col items-center mb-10">
       {/* Mockup Code Section */}
       <div
         className="flex justify-center my-8 mb-10 w-full max-w-xs"

@@ -40,7 +40,7 @@ const skills = {
     },
     {
       name: "Express Js",
-      logo: "https://images.seeklogo.com/logo-png/33/1/express-js-logo-png_seeklogo-339850.png?v=1957300750510964840",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7S33Oq2FeRbyBBA6l1q8PwLVa3SzaONO-9Q&s",
       para: "To build fast and scalable server-side applications js.",
       link: "https://expressjs.com"
     },
