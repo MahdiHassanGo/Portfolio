@@ -5,6 +5,11 @@ import { FocusCards } from "@/components/ui/focus-cards";
 
 const projects = [
   {
+    title: "Academix",
+    src: "https://i.ibb.co.com/3yj197GG/image.png",
+    link: "https://academix-a7d0b.web.app/",
+  },
+  {
     title: "CareHive",
     src: "https://i.ibb.co.com/YkS02B7/Project-3.png",
     link: "https://clothing-donation-d23d4.web.app/",
@@ -31,7 +36,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="w-full flex flex-col items-center mb-10">
-      {/* Mockup Code Section */}
+  
       <div
         className="flex justify-center my-8 mb-10 w-full max-w-xs"
         data-aos="fade-down"

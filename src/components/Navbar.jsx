@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCode } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+  };
+
   return (
     <div className="navbar fixed top-0 left-0 right-0 z-10 bg-opacity-30 backdrop-blur-md w-full">
       <div className="navbar-start">
         {/* Dropdown for mobile */}
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden"
+            onClick={toggleMenu} // Toggle the menu on click
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 text-white"
@@ -27,7 +38,9 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${
+              isMenuOpen ? "block" : "hidden" // Show menu if open
+            }`}
           >
             <li>
               <Link
@@ -90,7 +103,7 @@ const Navbar = () => {
       {/* Center Navbar Items (Desktop) */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-        <li>
+          <li>
             <Link
               to="home"
               smooth={true}
@@ -98,12 +111,11 @@ const Navbar = () => {
               className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
             >
               <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-               Home
+                Home
               </span>
             </Link>
           </li>
           <li>
-            
             <Link
               to="about-me"
               smooth={true}
@@ -139,7 +151,7 @@ const Navbar = () => {
               </span>
             </Link>
           </li>
-        
+
           <li>
             <Link
               to="contact-me"
@@ -156,18 +168,18 @@ const Navbar = () => {
       </div>
 
       {/* Navbar End (Download Resume Button) */}
-      <div className="navbar-end ">
-  <a
-    href='https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png'
-    download={true}
-    className="btn bg-transparent px-[2px] duration-300 hover:text-pColor py-[2px] explore-btn rounded-full h-max min-h-max border-none hover:border-none "
-  >
-    <span className="bg-primary flex items-center gap-1 border-t border-[#8636ff]/50 px-1 py-1 rounded-full relative text-white sm:px-6 sm:py-3">
-      <span className="text-sm sm:text-base">Download Resume</span>
-      <RiDownloadCloud2Line className="text-sm sm:text-base" />
-    </span>
-  </a>
-</div>
+      <div className="navbar-end">
+        <a
+          href="https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png"
+          download={true}
+          className="btn bg-transparent px-[2px] duration-300 hover:text-pColor py-[2px] explore-btn rounded-full h-max min-h-max border-none hover:border-none "
+        >
+          <span className="bg-primary flex items-center gap-1 border-t border-[#8636ff]/50 px-1 py-1 rounded-full relative text-white sm:px-6 sm:py-3">
+            <span className="text-sm sm:text-base">Download Resume</span>
+            <RiDownloadCloud2Line className="text-sm sm:text-base" />
+          </span>
+        </a>
+      </div>
     </div>
   );
 };
