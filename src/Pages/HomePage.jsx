@@ -40,7 +40,7 @@ const HomePage = memo(() => {
         </div>
           <img
             src="./assets/MyPhoto.png"
-            className="md:max-w-lg rounded-lg z-20"
+            className="max-w-[200px] md:max-w-lg rounded-lg z-20"
             alt="Main Hero" data-aos="fade-up"
             onContextMenu={(e) => e.preventDefault()}
           />
