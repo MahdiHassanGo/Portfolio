@@ -6,7 +6,7 @@ import { FocusCards } from "@/components/ui/focus-cards";
 const projects = [
   {
     title: "Academix",
-    src: "https://i.ibb.co.com/3yj197GG/image.png",
+    src: "https://github.com/MahdiHassanGo/Academix-Client/raw/main/img1.png",
     link: "https://academix-a7d0b.web.app/",
   },
   {

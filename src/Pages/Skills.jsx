@@ -120,7 +120,7 @@ const Skills = () => {
                 <div>
                   <h6 className="font-bold text-3xl text-white hover:text-webdev">{skill.name}</h6>
                   <div className="text-xl absolute top-3 right-0  text-white">
-                    {skills.icon ? createElement(skills.icon) : <FaArrowRight />}
+                  
                   </div>
                 </div>
               </BackgroundGradient>
