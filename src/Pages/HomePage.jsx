@@ -166,7 +166,7 @@ const HomePage = memo(() => {
           </div>
         </nav>
 
-        {/* CTA Button */}
+        {/* CTA Button
         <div className="flex justify-center mt-14 z-20 pb-10" data-aos="fade-up" data-aos-delay="600">
           <a
             href="https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png"
@@ -182,7 +182,7 @@ const HomePage = memo(() => {
             </span>
             <span className="relative text-xl tracking-wide font-outfit drop-shadow-md">Download Resume</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
