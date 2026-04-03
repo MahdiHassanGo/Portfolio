@@ -22,7 +22,17 @@ const {
 		},
 		fontFamily: {
 			league: ['League Gothic', 'sans-serif'],
-		  },
+			outfit: ['Outfit', 'sans-serif'],
+		},
+		keyframes: {
+		  marquee: {
+			'0%': { transform: 'translateX(0%)' },
+			'100%': { transform: 'translateX(-50%)' },
+		  }
+		},
+		animation: {
+		  marquee: 'marquee 25s linear infinite',
+		}
 	  },
 	},
 	plugins: [addVariablesForColors,

@@ -4,26 +4,33 @@ import { Link } from "react-scroll";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+    setIsMenuOpen(!isMenuOpen);
   };
 
+  const navLinks = [
+    { name: "Home", to: "home" },
+    { name: "About Me", to: "about-me" },
+    { name: "Skills", to: "skills" },
+    { name: "Projects", to: "projects" }
+  ];
+
   return (
-    <div className="navbar fixed top-0 left-0 right-0 z-10 bg-opacity-30 backdrop-blur-md w-full">
+    <div className="navbar fixed top-0 left-0 right-0 z-50 bg-[#021526]/80 backdrop-blur-lg w-full border-b border-white/5 py-4 transition-all">
       <div className="navbar-start">
         {/* Dropdown for mobile */}
         <div className="dropdown">
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost lg:hidden"
-            onClick={toggleMenu} // Toggle the menu on click
+            className="btn btn-ghost lg:hidden hover:bg-white/5"
+            onClick={toggleMenu}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-white"
+              className="h-6 w-6 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -38,145 +45,69 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${
-              isMenuOpen ? "block" : "hidden" // Show menu if open
+            className={`menu menu-sm dropdown-content bg-[#0a1f35]/95 backdrop-blur-xl border border-white/10 rounded-2xl z-[1] mt-4 w-56 p-4 shadow-2xl ${
+              isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <li>
-              <Link
-                to="about-me"
-                smooth={true}
-                duration={500}
-                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-              >
-                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-white">
-                  About Me
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-              >
-                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-white">
-                  Skills
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-              >
-                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-white">
-                  Projects
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact-me"
-                smooth={true}
-                duration={500}
-                className="p-[3px] rounded-full w-max z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-              >
-                <span className="bg-primary text-xs px-4 py-[4px] rounded-full relative text-white">
-                  Contact Me
-                </span>
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.name} className="mb-2">
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-3 text-base font-outfit text-white hover:text-blue-400 hover:bg-white/5 rounded-xl transition-all"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Logo and Title */}
-        <div className="flex items-center">
-          <FaCode className="text-white text-3xl ml-1 sm:ml-20" />
-          <h2 className="ml-2 text-xl text-white">Mahdi</h2>
+        <div className="flex items-center sm:ml-10">
+          <FaCode className="text-blue-400 text-3xl drop-shadow-[0_0_10px_rgba(59,130,246,0.6)] ml-2" />
+          <h2 className="ml-3 text-2xl font-league tracking-wider text-white uppercase mt-1">Mahdi</h2>
         </div>
       </div>
 
       {/* Center Navbar Items (Desktop) */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-            >
-              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-                Home
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="about-me"
-              smooth={true}
-              duration={500}
-              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-            >
-              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-                About Me
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="skills"
-              smooth={true}
-              duration={500}
-              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-            >
-              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-                Skills
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-            >
-              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-                Projects
-              </span>
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="contact-me"
-              smooth={true}
-              duration={500}
-              className="p-[3px] rounded-full z-0 bg-transparent hover:bg-pColor/50 border-none btn min-h-max h-max"
-            >
-              <span className="bg-primary px-4 py-[4px] rounded-full relative text-white">
-                Contact Me
-              </span>
-            </Link>
-          </li>
+        <ul className="flex items-center gap-8 px-1">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
+                className="font-outfit font-medium text-gray-300 hover:text-white relative group cursor-pointer transition-colors"
+                activeClass="text-white"
+                spy={true}
+              >
+                {link.name}
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Navbar End (Download Resume Button) */}
-      <div className="navbar-end">
+      <div className="navbar-end pr-4 sm:pr-10">
         <a
           href="https://i.ibb.co.com/DGjtQ5d/White-and-Black-Tech-Professional-Resume.png"
           download={true}
-          className="btn bg-transparent px-[2px] duration-300 hover:text-pColor py-[2px] explore-btn rounded-full h-max min-h-max border-none hover:border-none "
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-2.5 font-outfit font-medium text-white transition-all duration-300 rounded-full"
         >
-          <span className="bg-primary flex items-center gap-1 border-t border-[#8636ff]/50 px-1 py-1 rounded-full relative text-white sm:px-6 sm:py-3">
-            <span className="text-sm sm:text-base">Download Resume</span>
-            <RiDownloadCloud2Line className="text-sm sm:text-base" />
+          <span className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 p-[2px] opacity-80 group-hover:blur-sm overflow-hidden transition-all duration-300"></span>
+          <span className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 p-[2px] opacity-100 transition-transform group-hover:scale-105 duration-300">
+             <span className="flex h-full w-full rounded-full bg-primaryBg group-hover:bg-primaryBg/60 transition-colors duration-500"></span>
+          </span>
+          <span className="relative flex items-center gap-2 text-sm md:text-base tracking-wide font-outfit drop-shadow-md">
+            Download <RiDownloadCloud2Line className="text-lg md:text-xl" />
           </span>
         </a>
       </div>
