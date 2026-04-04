@@ -59,8 +59,8 @@ const projects = [
   },
   {
     title: "WhereIsIt",
-    src: "https://i.ibb.co.com/CKybk8w/image.png",
-    link: "https://whereisit-88cd2.web.app",
+    src: "https://i.ibb.co.com/35DRgLnR/image.png",
+    link: "https://whereisit-project.netlify.app",
     overview: "A community-driven lost and found web application where users can report lost items or list found items, helping people recover their belongings.",
     features: [
       "Interactive listings for lost and found items with search functionality.",
@@ -80,7 +80,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects" className="w-full flex flex-col items-center mb-10 overflow-hidden bg-primaryBg">
+    <div id="projects" className="w-full flex flex-col items-center  overflow-hidden bg-primaryBg">
       
       {/* Installation Mockup */}
       <div

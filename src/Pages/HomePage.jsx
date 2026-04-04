@@ -16,7 +16,7 @@ const HomePage = memo(() => {
   useEffect(() => {
     if (typewriterRef.current) {
       new Typewriter(typewriterRef.current, {
-        strings: [" Web Developer", " Student", " Gamer"],
+        strings: [" Web Developer", " Student", " Gamer","Cyber Security Enthusiast","CTF Player"],
         autoStart: true,
         loop: true,
         delay: 75,
@@ -58,7 +58,7 @@ const HomePage = memo(() => {
             duration={2} 
             filter={false} 
             words={words} 
-            className="text-5xl md:text-6xl lg:text-7xl font-league tracking-widest uppercase text-white drop-shadow-xl" 
+            className="text-4xl md:text-6xl lg:text-7xl font-outfit font-bold tracking-tight text-white drop-shadow-2xl" 
           />
         </div>
 
